@@ -64,6 +64,8 @@
   .btn-red{background:var(--red);color:var(--white);}
   .btn-cream{background:var(--cream);color:var(--purple-dark);}
   .btn-outline{background:transparent;color:var(--white);border:2px solid var(--white);}
+
+  /* ---------- HERO ---------- */
   .hero{
     background:var(--purple);
     color:var(--white);
@@ -96,6 +98,8 @@
     max-width:520px;
   }
   .hero .cta-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* wavy divider like ahead's packaging cut-outs */
   .scallop{
     position:relative;
     height:34px;
@@ -109,7 +113,10 @@
     background:
       radial-gradient(circle at 10px 0, transparent 12px, var(--cream) 13px) 0 -6px / 40px 40px repeat-x;
   }
+
   section{padding:58px 0;}
+
+  /* ---------- INTRO / SNACK PEDIGREE ---------- */
   .intro h2{
     font-size:clamp(1.5rem,3.2vw,2.1rem);
     font-weight:700;
@@ -142,6 +149,8 @@
   .dot-pb{background:var(--red);}
   .dot-chio{background:var(--blue);}
   .dot-pg{background:var(--purple);}
+
+  /* ---------- 3 CARDS ---------- */
   .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
   .card{
     border-radius:24px;
@@ -153,6 +162,8 @@
   .card-pink{background:var(--pink);color:var(--purple-dark);}
   .card-green{background:var(--green);}
   .card-blue{background:var(--blue);}
+
+  /* ---------- ERFOLGE ---------- */
   .erfolge{background:var(--purple);color:var(--white);}
   .erfolge h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;text-align:center;margin-bottom:8px;}
   .erfolge .lead{text-align:center;color:var(--yellow);font-family:'Red Hat Display',sans-serif;font-weight:500;margin-bottom:36px;}
@@ -171,6 +182,8 @@
     margin-bottom:8px;
   }
   .erfolg-card p{margin:0;font-size:.92rem;}
+
+  /* ---------- REGIONEN ---------- */
   .regionen{text-align:center;}
   .regionen h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;}
   .regionen p{max-width:56ch;margin:16px auto 0;font-size:1.02rem;}
@@ -191,6 +204,8 @@
   .region-chip:nth-child(1){background:var(--pink);color:var(--purple-dark);}
   .region-chip:nth-child(2){background:var(--yellow);color:var(--ink);}
   .region-chip:nth-child(3){background:var(--blue);color:var(--white);}
+
+  /* ---------- CV CTA ---------- */
   .cv-cta{
     background:var(--yellow);
     border-radius:28px;
@@ -200,13 +215,17 @@
   .cv-cta h2{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:700;max-width:24ch;margin:0 auto;}
   .cv-cta p{margin-top:12px;font-size:1rem;max-width:48ch;margin-left:auto;margin-right:auto;}
   .cv-cta .btn{margin-top:22px;}
+
+  /* ---------- KONTAKT ---------- */
   .contact{background:var(--ink);color:var(--white);text-align:center;}
   .contact h2{font-size:clamp(1.6rem,3.4vw,2.1rem);font-weight:700;}
   .contact p.tag{margin-top:10px;color:var(--yellow);font-family:'Red Hat Display',sans-serif;font-weight:500;}
   .contact .cta-row{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
   .contact .details{margin-top:30px;font-size:.92rem;opacity:.75;}
   .contact .details a{color:var(--white);}
+
   footer{background:#111;color:rgba(255,255,255,.55);text-align:center;padding:20px 0;font-size:.8rem;}
+
   @media (max-width:760px){
     .card-row{grid-template-columns:1fr;}
     .erfolge-grid{grid-template-columns:1fr;}
@@ -215,6 +234,8 @@
 </style>
 </head>
 <body>
+
+  <!-- HERO -->
   <header class="hero">
     <div class="wrap inner">
       <span class="eyebrow">Initiativbewerbung · Area Sales Manager</span>
@@ -227,10 +248,12 @@
     </div>
   </header>
   <div class="scallop"></div>
+
+  <!-- INTRO / SNACK PEDIGREE -->
   <section class="intro">
     <div class="wrap">
       <h2>Snacks sind bei mir kein Quereinstieg.</h2>
-      <p>Ich habe im Vertrieb angefangen, als Pom-Bär noch bei Wolf Bergstraße hergestellt wurde. Bei Intersnack ging es mit Chio Chips weiter, bei Procter &amp; Gamble kam Pringles dazu. Seit 23 Jahren bringe ich Marken ins Regal – zuletzt Lenor und Gillette. Jetzt gerne ahead.</p>
+      <p>Ich habe im Vertrieb angefangen, als Pom-Bär noch bei Wolf Bergstraße hergestellt wurde. Bei Intersnack ging es mit Chio Chips weiter, bei Procter &amp; Gamble kam Pringles dazu. Seit über 25 Jahren arbeite ich im FMCG-Vertrieb – 12 davon als Field Account Manager direkt am POS, zuletzt mit Lenor und Gillette. Jetzt gerne ahead.</p>
       <p>Ich bin kontaktfreudig und gehe selbstbewusst auf neue Handelspartner zu – auch auf die, die noch nie von uns gehört haben.</p>
       <div class="pedigree-row">
         <div class="pedigree-chip"><span class="dot dot-pb">🐻</span> Wolf Bergstraße · Pom-Bär</div>
@@ -238,6 +261,7 @@
         <div class="pedigree-chip"><span class="dot dot-pg">🥫</span> Procter &amp; Gamble · Pringles</div>
       </div>
     </div>
+
     <div class="wrap card-row" style="margin-top:44px;">
       <div class="card card-pink">
         <h3>Neulistungen</h3>
@@ -253,6 +277,8 @@
       </div>
     </div>
   </section>
+
+  <!-- ERFOLGE -->
   <section class="erfolge" id="erfolge">
     <div class="wrap">
       <h2>Zahlen statt Behauptungen</h2>
@@ -260,7 +286,7 @@
       <div class="erfolge-grid">
         <div class="erfolg-card">
           <div class="big">Nr. 1 in Deutschland</div>
-          <p>Lenor Unstoppables Launch: 90 % Distribution in 2 statt 4 Wochen – Top-10-Verkäufer national.</p>
+          <p>Beim Lenor-Unstoppables-Launch: 120 Zweitplatzierungen im eigenen Gebiet (Team Südwest gesamt: 800).</p>
         </div>
         <div class="erfolg-card">
           <div class="big">250 % Zielerreichung</div>
@@ -271,12 +297,14 @@
           <p>Gillette-Klingen bei der Mehrheit angesprochener Edeka-Händler unaufgefordert neu platziert.</p>
         </div>
         <div class="erfolg-card">
-          <div class="big">120 Zweitplatzierungen</div>
-          <p>Allein im eigenen Gebiet beim Lenor-Launch – Team Südwest gesamt: 800.</p>
+          <div class="big">90 % Distribution</div>
+          <p>Bei Produktneueinführungen in 2 statt 4 Wochen – Top-10-Verkäufer Deutschlands (Waschmittel).</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- REGIONEN -->
   <section class="regionen">
     <div class="wrap">
       <h2>Ich passe in mehr als eine Region.</h2>
@@ -288,6 +316,8 @@
       </div>
     </div>
   </section>
+
+  <!-- CV CTA -->
   <section>
     <div class="wrap">
       <div class="cv-cta">
@@ -297,6 +327,8 @@
       </div>
     </div>
   </section>
+
+  <!-- KONTAKT -->
   <section class="contact" id="kontakt">
     <div class="wrap">
       <h2>Lust, drüber zu sprechen?</h2>
@@ -310,8 +342,10 @@
       </div>
     </div>
   </section>
+
   <footer>
     Marc Webersdorfer · Area Sales Manager
   </footer>
+
 </body>
 </html>
