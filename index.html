@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marc Webersdorfer – Area Sales Manager bei ahead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Red+Hat+Display:wght@500;700;900&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFFAF1;
+    --ink:#1B1B1B;
+    --purple:#6B3EB4;
+    --purple-dark:#4E2C8A;
+    --red:#C20019;
+    --yellow:#FFEE1D;
+    --pink:#FF77D3;
+    --green:#008540;
+    --blue:#0047C7;
+    --white:#FFFFFF;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Red Hat Text',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    font-size:17px;
+  }
+  h1,h2,h3{
+    font-family:'Baloo 2',sans-serif;
+    margin:0;
+    line-height:1.08;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    display:inline-block;
+    font-family:'Red Hat Display',sans-serif;
+    font-size:.85rem;
+    font-weight:700;
+    padding:7px 18px;
+    border-radius:999px;
+    background:var(--yellow);
+    color:var(--purple-dark);
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Red Hat Display',sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    padding:14px 28px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px) rotate(-.5deg);}
+  .btn-red{background:var(--red);color:var(--white);}
+  .btn-cream{background:var(--cream);color:var(--purple-dark);}
+  .btn-outline{background:transparent;color:var(--white);border:2px solid var(--white);}
+  .hero{
+    background:var(--purple);
+    color:var(--white);
+    padding:60px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(255,238,29,.25), transparent 45%),
+      radial-gradient(circle at 8% 80%, rgba(255,119,211,.25), transparent 40%);
+    pointer-events:none;
+  }
+  .hero .inner{position:relative;}
+  .hero .eyebrow{margin-bottom:24px;}
+  .hero h1{
+    font-size:clamp(2.1rem,5vw,3.3rem);
+    font-weight:700;
+    max-width:680px;
+  }
+  .hero .sub{
+    font-family:'Red Hat Display',sans-serif;
+    font-weight:500;
+    font-size:clamp(1.05rem,2.2vw,1.3rem);
+    color:var(--yellow);
+    margin-top:20px;
+    max-width:520px;
+  }
+  .hero .cta-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
+  .scallop{
+    position:relative;
+    height:34px;
+    background:var(--purple);
+  }
+  .scallop::after{
+    content:"";
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:34px;
+    background:
+      radial-gradient(circle at 10px 0, transparent 12px, var(--cream) 13px) 0 -6px / 40px 40px repeat-x;
+  }
+  section{padding:58px 0;}
+  .intro h2{
+    font-size:clamp(1.5rem,3.2vw,2.1rem);
+    font-weight:700;
+    max-width:16ch;
+  }
+  .intro p{margin-top:18px;max-width:60ch;font-size:1.05rem;}
+  .pedigree-row{
+    margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .pedigree-chip{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--white);
+    border:2px solid var(--ink);
+    border-radius:999px;
+    padding:9px 18px 9px 12px;
+    font-family:'Red Hat Display',sans-serif;
+    font-weight:700;
+    font-size:.92rem;
+  }
+  .pedigree-chip .dot{
+    width:22px;height:22px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.7rem;color:var(--white);
+  }
+  .dot-pb{background:var(--red);}
+  .dot-chio{background:var(--blue);}
+  .dot-pg{background:var(--purple);}
+  .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
+  .card{
+    border-radius:24px;
+    padding:26px 24px;
+    color:var(--white);
+  }
+  .card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;}
+  .card p{font-size:.94rem;margin:0;opacity:.95;}
+  .card-pink{background:var(--pink);color:var(--purple-dark);}
+  .card-green{background:var(--green);}
+  .card-blue{background:var(--blue);}
+  .erfolge{background:var(--purple);color:var(--white);}
+  .erfolge h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;text-align:center;margin-bottom:8px;}
+  .erfolge .lead{text-align:center;color:var(--yellow);font-family:'Red Hat Display',sans-serif;font-weight:500;margin-bottom:36px;}
+  .erfolge-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .erfolg-card{
+    background:rgba(255,255,255,.08);
+    border:2px solid rgba(255,255,255,.25);
+    border-radius:20px;
+    padding:22px;
+  }
+  .erfolg-card .big{
+    font-family:'Baloo 2',sans-serif;
+    font-size:1.6rem;
+    font-weight:700;
+    color:var(--yellow);
+    margin-bottom:8px;
+  }
+  .erfolg-card p{margin:0;font-size:.92rem;}
+  .regionen{text-align:center;}
+  .regionen h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;}
+  .regionen p{max-width:56ch;margin:16px auto 0;font-size:1.02rem;}
+  .region-chips{
+    margin-top:26px;
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .region-chip{
+    font-family:'Red Hat Display',sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    padding:12px 26px;
+    border-radius:999px;
+  }
+  .region-chip:nth-child(1){background:var(--pink);color:var(--purple-dark);}
+  .region-chip:nth-child(2){background:var(--yellow);color:var(--ink);}
+  .region-chip:nth-child(3){background:var(--blue);color:var(--white);}
+  .cv-cta{
+    background:var(--yellow);
+    border-radius:28px;
+    padding:40px 36px;
+    text-align:center;
+  }
+  .cv-cta h2{font-size:clamp(1.4rem,3vw,1.8rem);font-weight:700;max-width:24ch;margin:0 auto;}
+  .cv-cta p{margin-top:12px;font-size:1rem;max-width:48ch;margin-left:auto;margin-right:auto;}
+  .cv-cta .btn{margin-top:22px;}
+  .contact{background:var(--ink);color:var(--white);text-align:center;}
+  .contact h2{font-size:clamp(1.6rem,3.4vw,2.1rem);font-weight:700;}
+  .contact p.tag{margin-top:10px;color:var(--yellow);font-family:'Red Hat Display',sans-serif;font-weight:500;}
+  .contact .cta-row{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .contact .details{margin-top:30px;font-size:.92rem;opacity:.75;}
+  .contact .details a{color:var(--white);}
+  footer{background:#111;color:rgba(255,255,255,.55);text-align:center;padding:20px 0;font-size:.8rem;}
+  @media (max-width:760px){
+    .card-row{grid-template-columns:1fr;}
+    .erfolge-grid{grid-template-columns:1fr;}
+    .hero .cta-row{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap inner">
+      <span class="eyebrow">Initiativbewerbung · Area Sales Manager</span>
+      <h1>Marc Webersdorfer bringt ahead ins Regal.</h1>
+      <div class="sub">25+ Jahre Snacks &amp; LEH-Vertrieb – flexibel für Köln, Berlin-West oder Ulm.</div>
+      <div class="cta-row">
+        <a href="#erfolge" class="btn btn-cream">Track Record ansehen</a>
+        <a href="#kontakt" class="btn btn-outline">Kontakt</a>
+      </div>
+    </div>
+  </header>
+  <div class="scallop"></div>
+  <section class="intro">
+    <div class="wrap">
+      <h2>Snacks sind bei mir kein Quereinstieg.</h2>
+      <p>Ich habe im Vertrieb angefangen, als Pom-Bär noch bei Wolf Bergstraße hergestellt wurde. Bei Intersnack ging es mit Chio Chips weiter, bei Procter &amp; Gamble kam Pringles dazu. Seit 23 Jahren bringe ich Marken ins Regal – zuletzt Lenor und Gillette. Jetzt gerne ahead.</p>
+      <p>Ich bin kontaktfreudig und gehe selbstbewusst auf neue Handelspartner zu – auch auf die, die noch nie von uns gehört haben.</p>
+      <div class="pedigree-row">
+        <div class="pedigree-chip"><span class="dot dot-pb">🐻</span> Wolf Bergstraße · Pom-Bär</div>
+        <div class="pedigree-chip"><span class="dot dot-chio">🥔</span> Intersnack · Chio Chips</div>
+        <div class="pedigree-chip"><span class="dot dot-pg">🥫</span> Procter &amp; Gamble · Pringles</div>
+      </div>
+    </div>
+    <div class="wrap card-row" style="margin-top:44px;">
+      <div class="card card-pink">
+        <h3>Neulistungen</h3>
+        <p>Ich überzeuge Handelspartner von Dingen, die sie vorher nicht angefragt haben – zuletzt die Umstellung von Gillette-Klingen bei Edeka von der Bedientheke in die Freiwahl.</p>
+      </div>
+      <div class="card card-green">
+        <h3>LEH von innen</h3>
+        <p>80+ Verbrauchermärkte, 2-Wochen-Rhythmus, direkter Draht zu Marktleitern in Mannheim, Heidelberg, Kaiserslautern und dem Saarland.</p>
+      </div>
+      <div class="card card-blue">
+        <h3>Eigenverantwortung</h3>
+        <p>Ich habe mein Gebiet geführt wie ein eigenes Business – von der Bestellmenge am POS bis zur KPI-Steuerung.</p>
+      </div>
+    </div>
+  </section>
+  <section class="erfolge" id="erfolge">
+    <div class="wrap">
+      <h2>Zahlen statt Behauptungen</h2>
+      <p class="lead">Das kommt bei euch an, wenn ich loslege.</p>
+      <div class="erfolge-grid">
+        <div class="erfolg-card">
+          <div class="big">Nr. 1 in Deutschland</div>
+          <p>Lenor Unstoppables Launch: 90 % Distribution in 2 statt 4 Wochen – Top-10-Verkäufer national.</p>
+        </div>
+        <div class="erfolg-card">
+          <div class="big">250 % Zielerreichung</div>
+          <p>LKW-Aktion Wasch- &amp; Reinigungsmittel: 5 statt 1–2 Aktionen umgesetzt.</p>
+        </div>
+        <div class="erfolg-card">
+          <div class="big">Freiwahl statt Theke</div>
+          <p>Gillette-Klingen bei der Mehrheit angesprochener Edeka-Händler unaufgefordert neu platziert.</p>
+        </div>
+        <div class="erfolg-card">
+          <div class="big">120 Zweitplatzierungen</div>
+          <p>Allein im eigenen Gebiet beim Lenor-Launch – Team Südwest gesamt: 800.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="regionen">
+    <div class="wrap">
+      <h2>Ich passe in mehr als eine Region.</h2>
+      <p>Ich bin für die richtige Stelle bereit umzuziehen und interessiere mich für gleich drei eurer Gebiete – sagt mir, wo der Bedarf am größten ist.</p>
+      <div class="region-chips">
+        <span class="region-chip">Köln</span>
+        <span class="region-chip">Berlin-West</span>
+        <span class="region-chip">Ulm</span>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="cv-cta">
+        <h2>Der ganze Werdegang, kompakt auf zwei Seiten.</h2>
+        <p>Stationen, Zahlen, Zertifizierungen – alles Weitere steht im Lebenslauf.</p>
+        <a href="./Lebenslauf-Marc-Webersdorfer.pdf" class="btn btn-red">Lebenslauf laden</a>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="kontakt">
+    <div class="wrap">
+      <h2>Lust, drüber zu sprechen?</h2>
+      <p class="tag">Ich freue mich auf den Austausch.</p>
+      <div class="cta-row">
+        <a href="mailto:marcwebersdorfer@hotmail.de" class="btn btn-red">E-Mail schreiben</a>
+        <a href="https://www.linkedin.com/in/marc-webersdorfer" class="btn btn-outline">LinkedIn</a>
+      </div>
+      <div class="details">
+        Frankfurter Str. 40, 64560 Riedstadt · +49 177 7932783
+      </div>
+    </div>
+  </section>
+  <footer>
+    Marc Webersdorfer · Area Sales Manager
+  </footer>
+</body>
+</html>
