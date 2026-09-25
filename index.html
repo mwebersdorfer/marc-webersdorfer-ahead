@@ -93,7 +93,12 @@
       radial-gradient(circle at 8% 80%, rgba(255,119,211,.25), transparent 40%);
     pointer-events:none;
   }
-  .hero .inner{position:relative;}
+  .hero .inner{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);align-items:center;gap:20px;min-height:430px;}
+  .hero-copy{position:relative;z-index:3;padding:10px 0;}
+  .hero-portrait{position:relative;align-self:stretch;min-height:390px;z-index:2;}
+  .hero-portrait::before{content:"";position:absolute;width:310px;height:310px;border-radius:48% 52% 62% 38% / 42% 40% 60% 58%;background:var(--yellow);right:-65px;top:20px;transform:rotate(10deg);opacity:.96;}
+  .hero-portrait::after{content:"";position:absolute;width:230px;height:170px;border-radius:58% 42% 38% 62% / 48% 55% 45% 52%;background:var(--pink);right:155px;bottom:0;transform:rotate(-10deg);opacity:.9;}
+  .hero-portrait img{position:absolute;z-index:2;right:-30px;bottom:-75px;width:min(512px,50vw);max-width:none;height:auto;display:block;filter:drop-shadow(0 14px 18px rgba(40,18,70,.18));}
   .hero .eyebrow{margin-bottom:24px;}
   .hero h1{
     font-size:clamp(2.1rem,5vw,3.3rem);
@@ -170,8 +175,8 @@
   .card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;}
   .card p{font-size:.94rem;margin:0;opacity:.9;}
   .card-magenta{background:var(--magenta);color:var(--white);}
-  .card-cyan{background:var(--cyan);color:var(--ink);}
-  .card-orange{background:var(--orange);color:var(--ink);}
+  .card-pink{background:var(--pink);color:var(--ink);}
+  .card-yellow{background:var(--yellow);color:var(--ink);}
 
   /* ---------- ERFOLGE ---------- */
   .erfolge{background:var(--purple);color:var(--white);}
@@ -239,6 +244,12 @@
   @media (max-width:760px){
     .card-row{grid-template-columns:1fr;}
     .erfolge-grid{grid-template-columns:1fr;}
+    .hero .inner{grid-template-columns:1fr;gap:6px;min-height:0;}
+    .hero-copy{z-index:3;}
+    .hero-portrait{min-height:310px;margin-top:10px;}
+    .hero-portrait img{width:min(390px,88vw);right:-35px;bottom:-90px;}
+    .hero-portrait::before{width:240px;height:240px;right:-55px;top:18px;}
+    .hero-portrait::after{width:180px;height:125px;right:120px;bottom:10px;}
     .hero .cta-row{flex-direction:column;align-items:flex-start;}
   }
 </style>
@@ -248,12 +259,17 @@
   <!-- HERO -->
   <header class="hero">
     <div class="wrap inner">
-      <span class="eyebrow">Area Sales Manager · Drei Regionen. Ein Kandidat.</span>
-      <h1>Marc Webersdorfer bringt ahead ins Regal.</h1>
-      <div class="sub">25+ Jahre FMCG-Vertrieb · 12 Jahre Field Sales · Snack-Herkunft inklusive – flexibel für Köln, Berlin-West oder Ulm.</div>
-      <div class="cta-row">
-        <a href="#erfolge" class="btn btn-cream">Track Record ansehen</a>
-        <a href="#kontakt" class="btn btn-outline">Kontakt</a>
+      <div class="hero-copy">
+        <span class="eyebrow">Area Sales Manager · Drei Regionen. Ein Kandidat.</span>
+        <h1>Marc Webersdorfer bringt ahead ins Regal.</h1>
+        <div class="sub">25+ Jahre FMCG-Vertrieb · 12 Jahre Field Sales · Snack-Herkunft inklusive – flexibel für Köln, Berlin-West oder Ulm.</div>
+        <div class="cta-row">
+          <a href="#erfolge" class="btn btn-cream">Track Record ansehen</a>
+          <a href="#kontakt" class="btn btn-outline">Kontakt</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <img src="./marc-hero.png" alt="Marc Webersdorfer">
       </div>
     </div>
   </header>
@@ -280,11 +296,11 @@
         <h3>Überzeugen statt abarbeiten</h3>
         <p>Ich überzeuge Handelspartner von Dingen, die sie vorher nicht angefragt haben – zuletzt die Umstellung von Gillette-Klingen bei Edeka von der Bedientheke in die Freiwahl.</p>
       </div>
-      <div class="card card-cyan">
+      <div class="card card-pink">
         <h3>LEH aus erster Hand</h3>
         <p>80+ Verbrauchermärkte, 2-Wochen-Rhythmus, direkter Draht zu Marktleitern in Mannheim, Heidelberg, Kaiserslautern und dem Saarland.</p>
       </div>
-      <div class="card card-orange">
+      <div class="card card-yellow">
         <h3>Eigenverantwortung</h3>
         <p>Mein Gebiet war mein Business – Touren, Kunden, Bestellmengen, Platzierungen und Ziele hatte ich selbst im Griff.</p>
       </div>
