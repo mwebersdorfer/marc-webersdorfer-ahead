@@ -17,6 +17,7 @@
     --pink:#FF77D3;
     --green:#008540;
     --blue:#0047C7;
+    --orange:#FFA40D;
     --white:#FFFFFF;
     --maxw:920px;
   }
@@ -30,8 +31,14 @@
     line-height:1.6;
     font-size:17px;
   }
-  h1,h2,h3{
+  h1{
     font-family:'Baloo 2',sans-serif;
+    margin:0;
+    line-height:1.08;
+  }
+  h2,h3{
+    font-family:'Red Hat Display',sans-serif;
+    font-weight:700;
     margin:0;
     line-height:1.08;
   }
@@ -147,21 +154,20 @@
     font-size:.7rem;color:var(--white);
   }
   .dot-pb{background:var(--red);}
-  .dot-chio{background:var(--blue);}
+  .dot-chio{background:var(--purple);}
   .dot-pg{background:var(--purple);}
 
   /* ---------- 3 CARDS ---------- */
   .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
   .card{
-    border-radius:24px;
+    border-radius:16px;
     padding:26px 24px;
-    color:var(--white);
+    background:var(--white);
+    border-top:6px solid var(--purple);
+    color:var(--ink);
   }
-  .card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;}
-  .card p{font-size:.94rem;margin:0;opacity:.95;}
-  .card-pink{background:var(--pink);color:var(--purple-dark);}
-  .card-green{background:var(--green);}
-  .card-blue{background:var(--blue);}
+  .card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:var(--purple-dark);}
+  .card p{font-size:.94rem;margin:0;opacity:.85;}
 
   /* ---------- ERFOLGE ---------- */
   .erfolge{background:var(--purple);color:var(--white);}
@@ -201,9 +207,9 @@
     padding:12px 26px;
     border-radius:999px;
   }
-  .region-chip:nth-child(1){background:var(--pink);color:var(--purple-dark);}
+  .region-chip:nth-child(1){background:var(--orange);color:var(--white);}
   .region-chip:nth-child(2){background:var(--yellow);color:var(--ink);}
-  .region-chip:nth-child(3){background:var(--blue);color:var(--white);}
+  .region-chip:nth-child(3){background:var(--green);color:var(--white);}
 
   /* ---------- CV CTA ---------- */
   .cv-cta{
@@ -240,7 +246,7 @@
     <div class="wrap inner">
       <span class="eyebrow">Area Sales Manager · Drei Regionen. Ein Kandidat.</span>
       <h1>Marc Webersdorfer bringt ahead ins Regal.</h1>
-      <div class="sub">25+ Jahre Snacks &amp; LEH-Vertrieb – flexibel für Köln, Berlin-West oder Ulm.</div>
+      <div class="sub">25+ Jahre FMCG-Vertrieb · 12 Jahre Field Sales · Snack-Herkunft inklusive – flexibel für Köln, Berlin-West oder Ulm.</div>
       <div class="cta-row">
         <a href="#erfolge" class="btn btn-cream">Track Record ansehen</a>
         <a href="#kontakt" class="btn btn-outline">Kontakt</a>
@@ -263,15 +269,15 @@
     </div>
 
     <div class="wrap card-row" style="margin-top:44px;">
-      <div class="card card-pink">
-        <h3>Neulistungen</h3>
+      <div class="card">
+        <h3>Überzeugen statt abarbeiten</h3>
         <p>Ich überzeuge Handelspartner von Dingen, die sie vorher nicht angefragt haben – zuletzt die Umstellung von Gillette-Klingen bei Edeka von der Bedientheke in die Freiwahl.</p>
       </div>
-      <div class="card card-green">
-        <h3>LEH von innen</h3>
+      <div class="card">
+        <h3>LEH aus erster Hand</h3>
         <p>80+ Verbrauchermärkte, 2-Wochen-Rhythmus, direkter Draht zu Marktleitern in Mannheim, Heidelberg, Kaiserslautern und dem Saarland.</p>
       </div>
-      <div class="card card-blue">
+      <div class="card">
         <h3>Eigenverantwortung</h3>
         <p>Mein Gebiet war mein Business – Touren, Kunden, Bestellmengen, Platzierungen und Ziele hatte ich selbst im Griff.</p>
       </div>
@@ -282,7 +288,7 @@
   <section class="erfolge" id="erfolge">
     <div class="wrap">
       <h2>Zahlen statt Behauptungen</h2>
-      <p class="lead">Das kommt bei euch an, wenn ich loslege.</p>
+      <p class="lead">So arbeite ich – und das bleibt so.</p>
       <div class="erfolge-grid">
         <div class="erfolg-card">
           <div class="big">Nr. 1 in Deutschland</div>
